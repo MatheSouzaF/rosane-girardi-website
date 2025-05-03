@@ -1,0 +1,1 @@
+<?php define("ASSETS_VERSION", "1746274289776");

@@ -1,0 +1,110 @@
+/* Main Color */
+/* Neutral Colors */
+.color-grey-0 {
+  color: #FFF;
+}
+
+.color-grey-600 {
+  color: #DFDFDF;
+}
+
+.color-grey-700 {
+  color: #B1B1B1;
+}
+
+.color-grey-800 {
+  color: #646464;
+}
+
+.color-grey-900 {
+  color: #181818;
+}
+
+.color-grey-1000 {
+  color: #000;
+}
+
+.input-color-form {
+  color: #656565;
+}
+
+body.page-template-homepage {
+  overflow: hidden;
+}
+body.page-template-homepage .swiper-button-next,
+body.page-template-homepage .swiper-button-prev {
+  top: auto !important;
+  bottom: 31px !important;
+  color: #ffffff !important;
+}
+body.page-template-homepage .swiper-button-next {
+  right: 40px !important;
+  left: auto;
+}
+body.page-template-homepage .swiper-button-prev {
+  right: 100px !important;
+  left: auto !important;
+}
+body.page-template-homepage .swiper.slider2 {
+  width: 100%;
+  height: 100vh;
+}
+body.page-template-homepage .swiper.slider1 {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body.page-template-homepage .swiper .project-name {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  font-weight: 250;
+  font-size: 36px;
+  line-height: 140%;
+  color: #ffffff;
+  z-index: 9;
+}
+body.page-template-homepage .swiper.slider1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body.page-template-homepage .swiper-slide:after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 184px;
+  left: -140px;
+  bottom: -26px;
+  z-index: 1;
+  background: #21201d;
+  -webkit-filter: blur(125px);
+          filter: blur(125px);
+}
+body.page-template-homepage .swiper.slider1 .swiper-slide:not(.swiper-slide-active) {
+  opacity: 0 !important;
+}
+@media (max-width: 768px) {
+  body.page-template-homepage .swiper .project-name {
+    left: 24px;
+    bottom: 64px;
+    font-size: 24px;
+  }
+}
+
+footer {
+  display: none;
+}
+/*# sourceMappingURL=home.css.map */

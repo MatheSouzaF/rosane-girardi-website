@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Mosk';
+  src: url('../../src/fonts/MoskLight300.woff2') format('woff2'),
+    url('../../src/fonts/MoskLight300.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mosk';
+  src: url('../../src/fonts/MoskThin100.woff2') format('woff2'), url('../../src/fonts/MoskThin100.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mosk';
+  src: url('../../src/fonts/MoskMedium500.woff2') format('woff2'),
+    url('../../src/fonts/MoskMedium500.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
