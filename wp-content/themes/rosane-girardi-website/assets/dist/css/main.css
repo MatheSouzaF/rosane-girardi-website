@@ -434,6 +434,7 @@ nav .button {
   line-height: 130%;
   color: #ffffff;
   position: relative;
+  z-index: 1;
 }
 .menu li a::after {
   content: "";
@@ -3078,10 +3079,6 @@ sup {
 
 textarea {
   word-wrap: break-word;
-}
-
-.d-none {
-  display: none !important;
 }
 
 a {

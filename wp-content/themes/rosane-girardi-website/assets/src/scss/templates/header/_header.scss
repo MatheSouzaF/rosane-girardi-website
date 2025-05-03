@@ -99,7 +99,7 @@ nav .button {
   line-height: 130%;
   color: #ffffff;
   position: relative;
-
+  z-index: 1;
   &::after {
     content: '';
     bottom: -2px;

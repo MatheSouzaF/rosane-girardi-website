@@ -15,16 +15,16 @@
         <?php
         if (have_rows('redes_sociais', 'options')) :
             while (have_rows('redes_sociais', 'options')) : the_row(); ?>
-        <?php
+                <?php
                 $link = get_sub_field('link_rede_sociais', 'options');
                 if ($link) :
                     $link_url = $link['url'];
                     $link_title = $link['title'];
                     $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-        <a class="" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
-            <p class=""><?php echo esc_html($link_title); ?></p>
-        </a>
-        <?php endif; ?>
+                    <a class="" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                        <p class=""><?php echo esc_html($link_title); ?></p>
+                    </a>
+                <?php endif; ?>
         <?php endwhile;
         endif; ?>
     </div>
@@ -34,61 +34,75 @@
 </footer>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const buttons = document.querySelectorAll('.filtro-btn');
-    const listaPost = document.querySelector('.lista-post');
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.filtro-btn');
+        const listaPost = document.querySelector('.lista-post');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const slug = button.dataset.slug;
-            // Remove a classe active de todos os botões
-            // Remove 'active' de todos os <li>
-            document.querySelectorAll('.filtro-taxonomias li').forEach(li => li.classList
-                .remove('active'));
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                const clickedLi = button.closest('li');
+                const wasActive = clickedLi.classList.contains('active');
+                const slug = button.dataset.slug;
 
-            // Adiciona 'active' no <li> pai do botão clicado
-            button.closest('li').classList.add('active');
+                // Remove 'active' de todos os <li>
+                document.querySelectorAll('.filtro-taxonomias li').forEach(li => li.classList
+                    .remove('active'));
 
+                // Se já estava ativo, desativa e remove o filtro
+                let filtroSlug = '';
+                if (!wasActive) {
+                    clickedLi.classList.add('active');
+                    filtroSlug = slug;
+                }
 
-            // Atualiza a URL sem recarregar
-            const newUrl = slug ? `?projeto=${slug}` :
-                '<?php echo get_post_type_archive_link('projetos'); ?>';
-            window.history.pushState(null, '', newUrl);
+                const baseUrl = '<?php echo get_post_type_archive_link("projetos"); ?>';
+                const newUrl = filtroSlug ? `${baseUrl}?modelo=${filtroSlug}` : baseUrl;
+                window.history.pushState(null, '', newUrl);
 
-            // Faz a requisição AJAX
-            fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    },
-                    body: new URLSearchParams({
-                        action: 'filtrar_projetos',
-                        modelo: slug
+                fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        },
+                        body: new URLSearchParams({
+                            action: 'filtrar_projetos',
+                            modelo: filtroSlug
+                        })
                     })
-                })
-                .then(res => res.text())
-                .then(data => {
-                    // Adiciona o fade-out
-                    listaPost.classList.add('fade-out');
+                    .then(res => res.text())
+                    .then(data => {
+                        listaPost.classList.add('fade-out');
 
-                    setTimeout(() => {
-                        // Atualiza os projetos
-                        listaPost.innerHTML = data;
-
-                        // Remove fade-out e aplica fade-in
-                        listaPost.classList.remove('fade-out');
-                        listaPost.classList.add('fade-in');
-
-                        // Remove fade-in depois da animação
                         setTimeout(() => {
-                            listaPost.classList.remove('fade-in');
-                        }, 300);
-                    }, 300);
-                });
+                            listaPost.innerHTML = data;
+                            listaPost.classList.remove('fade-out');
+                            listaPost.classList.add('fade-in');
 
+                            setTimeout(() => {
+                                listaPost.classList.remove('fade-in');
+                            }, 300);
+                        }, 300);
+                    });
+            });
         });
+
+        // Ativar botão com base na URL ao carregar a página
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentSlug = urlParams.get('modelo');
+
+        if (currentSlug) {
+            document.querySelectorAll('.filtro-btn').forEach(button => {
+                if (button.dataset.slug === currentSlug) {
+                    button.closest('li').classList.add('active');
+                }
+            });
+        }
     });
-});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    Fancybox.bind('[data-fancybox]', {});
 </script>
 
 

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta name="format-detection" content="telephone=no">
     <title><?php wp_title(); ?></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
     <?php wp_head(); ?>
 
@@ -38,26 +39,26 @@
                         $link_url = $link['url'];
                         $link_title = $link['title'];
                         $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                    <a class="projects" href="<?php echo esc_url($link_url); ?>"
-                        target="<?php echo esc_attr($link_target); ?>">
-                        <p class=""><?php echo esc_html($link_title); ?></p>
-                    </a>
+                        <a class="projects" href="<?php echo esc_url($link_url); ?>"
+                            target="<?php echo esc_attr($link_target); ?>">
+                            <p class=""><?php echo esc_html($link_title); ?></p>
+                        </a>
                     <?php endif; ?>
                     <div class="option">
                         <?php
                         if (have_rows('projetos', 'options')) :
                             while (have_rows('projetos', 'options')) : the_row(); ?>
-                        <?php
+                                <?php
                                 $link = get_sub_field('links_projetos', 'options');
                                 if ($link) :
                                     $link_url = $link['url'];
                                     $link_title = $link['title'];
                                     $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                        <a class="" href="<?php echo esc_url($link_url); ?>"
-                            target="<?php echo esc_attr($link_target); ?>">
-                            <p class=""><?php echo esc_html($link_title); ?></p>
-                        </a>
-                        <?php endif; ?>
+                                    <a class="" href="<?php echo esc_url($link_url); ?>"
+                                        target="<?php echo esc_attr($link_target); ?>">
+                                        <p class=""><?php echo esc_html($link_title); ?></p>
+                                    </a>
+                                <?php endif; ?>
                         <?php endwhile;
                         endif; ?>
                     </div>
@@ -69,9 +70,9 @@
                         $link_url = $link['url'];
                         $link_title = $link['title'];
                         $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                    <a class="" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
-                        <p class=""><?php echo esc_html($link_title); ?></p>
-                    </a>
+                        <a class="" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>">
+                            <p class=""><?php echo esc_html($link_title); ?></p>
+                        </a>
                     <?php endif; ?>
                 </li>
                 <li class="mobile-off">
@@ -82,10 +83,10 @@
                             $link_url = $link['url'];
                             $link_title = $link['title'];
                             $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                        <a class="" href="<?php echo esc_url($link_url); ?>"
-                            target="<?php echo esc_attr($link_target); ?>">
-                            <p class=""><?php echo esc_html($link_title); ?></p>
-                        </a>
+                            <a class="" href="<?php echo esc_url($link_url); ?>"
+                                target="<?php echo esc_attr($link_target); ?>">
+                                <p class=""><?php echo esc_html($link_title); ?></p>
+                            </a>
                         <?php endif; ?>
                     </a>
                 </li>
@@ -116,25 +117,25 @@
                                     $link_url = $link['url'];
                                     $link_title = $link['title'];
                                     $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                                <a class="projects" href="<?php echo esc_url($link_url); ?>"
-                                    target="<?php echo esc_attr($link_target); ?>">
-                                    <p class="link-menu"><?php echo esc_html($link_title); ?></p>
-                                </a>
+                                    <a class="projects" href="<?php echo esc_url($link_url); ?>"
+                                        target="<?php echo esc_attr($link_target); ?>">
+                                        <p class="link-menu"><?php echo esc_html($link_title); ?></p>
+                                    </a>
                                 <?php endif; ?>
                                 <?php
                                 if (have_rows('projetos', 'options')) :
                                     while (have_rows('projetos', 'options')) : the_row(); ?>
-                                <?php
+                                        <?php
                                         $link = get_sub_field('links_projetos', 'options');
                                         if ($link) :
                                             $link_url = $link['url'];
                                             $link_title = $link['title'];
                                             $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                                <a class="" href="<?php echo esc_url($link_url); ?>"
-                                    target="<?php echo esc_attr($link_target); ?>">
-                                    <p class="link-menu modelos"><?php echo esc_html($link_title); ?></p>
-                                </a>
-                                <?php endif; ?>
+                                            <a class="" href="<?php echo esc_url($link_url); ?>"
+                                                target="<?php echo esc_attr($link_target); ?>">
+                                                <p class="link-menu modelos"><?php echo esc_html($link_title); ?></p>
+                                            </a>
+                                        <?php endif; ?>
                                 <?php endwhile;
                                 endif; ?>
                             </li>
@@ -145,10 +146,10 @@
                                     $link_url = $link['url'];
                                     $link_title = $link['title'];
                                     $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                                <a class="" href="<?php echo esc_url($link_url); ?>"
-                                    target="<?php echo esc_attr($link_target); ?>">
-                                    <p class="link-menu"><?php echo esc_html($link_title); ?></p>
-                                </a>
+                                    <a class="" href="<?php echo esc_url($link_url); ?>"
+                                        target="<?php echo esc_attr($link_target); ?>">
+                                        <p class="link-menu"><?php echo esc_html($link_title); ?></p>
+                                    </a>
                                 <?php endif; ?>
                             </li>
                             <li class="">
@@ -159,10 +160,10 @@
                                         $link_url = $link['url'];
                                         $link_title = $link['title'];
                                         $link_target = $link['target'] ? $link['target'] : '_self'; ?>
-                                    <a class="" href="<?php echo esc_url($link_url); ?>"
-                                        target="<?php echo esc_attr($link_target); ?>">
-                                        <p class="link-menu"><?php echo esc_html($link_title); ?></p>
-                                    </a>
+                                        <a class="" href="<?php echo esc_url($link_url); ?>"
+                                            target="<?php echo esc_attr($link_target); ?>">
+                                            <p class="link-menu"><?php echo esc_html($link_title); ?></p>
+                                        </a>
                                     <?php endif; ?>
                                 </a>
                             </li>

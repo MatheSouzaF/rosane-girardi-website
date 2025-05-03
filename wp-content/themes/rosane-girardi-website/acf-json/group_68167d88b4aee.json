@@ -1,9 +1,9 @@
 {
-    "key": "group_681510e934d40",
-    "title": "Projetos",
+    "key": "group_68167d88b4aee",
+    "title": "Escrítorio",
     "fields": [
         {
-            "key": "field_681510e9383f9",
+            "key": "field_68167d88b89b1",
             "label": "Banner",
             "name": "",
             "aria-label": "",
@@ -21,9 +21,53 @@
             "selected": 0
         },
         {
-            "key": "field_68151115383fc",
-            "label": "Título Banner",
-            "name": "titulo_banner",
+            "key": "field_68167d9bb89b2",
+            "label": "Imagem Banner",
+            "name": "imagem_banner",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_681680d1e3770",
+            "label": "Descrição",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_681680e4e3771",
+            "label": "Título Descrição",
+            "name": "titulo_descricao",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -42,79 +86,9 @@
             "append": ""
         },
         {
-            "key": "field_681510f8383fa",
-            "label": "Banner Imagem Desktop",
-            "name": "banner_imagem_desktop",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_6815110a383fb",
-            "label": "Banner Imagem Mobile",
-            "name": "banner_imagem_mobile",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_68168ea005847",
-            "label": "Descrição",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_68168eae05848",
-            "label": "Descrição",
-            "name": "descricao",
+            "key": "field_681680f3e3772",
+            "label": "Texto Descrição",
+            "name": "texto_descricao",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -133,11 +107,11 @@
             "new_lines": ""
         },
         {
-            "key": "field_68168ebf05849",
-            "label": "Lista Descrição",
-            "name": "lista_descricao",
+            "key": "field_68168101b4905",
+            "label": "Imagem Descrição",
+            "name": "imagem_descricao",
             "aria-label": "",
-            "type": "repeater",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -146,41 +120,21 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Adicionar linha",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_68168eca0584a",
-                    "label": "Item Lista",
-                    "name": "item_lista",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_68168ebf05849"
-                }
-            ]
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
         },
         {
-            "key": "field_6816955ceba85",
-            "label": "Galeria",
+            "key": "field_681685518452e",
+            "label": "Texto Animado",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -197,9 +151,48 @@
             "selected": 0
         },
         {
-            "key": "field_681695b4eba86",
-            "label": "Galeiria de Imagens",
-            "name": "galeiria_de_imagens",
+            "key": "field_681685668452f",
+            "label": "Texto Animado",
+            "name": "texto_animado",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_68168606f74e7",
+            "label": "Time",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6816860cf74e8",
+            "label": "Time",
+            "name": "time",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -219,9 +212,31 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_681699c462523",
-                    "label": "Imagens",
-                    "name": "imagens",
+                    "key": "field_68168616f74e9",
+                    "label": "Nome Time",
+                    "name": "nome_time",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6816860cf74e8"
+                },
+                {
+                    "key": "field_6816861ef74ea",
+                    "label": "Imagem Time",
+                    "name": "imagem_time",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
@@ -243,14 +258,77 @@
                     "mime_types": "",
                     "allow_in_bindings": 0,
                     "preview_size": "medium",
-                    "parent_repeater": "field_681695b4eba86"
-                },
+                    "parent_repeater": "field_6816860cf74e8"
+                }
+            ]
+        },
+        {
+            "key": "field_6816884291e22",
+            "label": "Serviços",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_6816884b91e23",
+            "label": "Título Serviços",
+            "name": "titulo_servicos",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6816885f91e24",
+            "label": "Repetidor Serviços",
+            "name": "repetidor_servicos",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Adicionar linha",
+            "rows_per_page": 20,
+            "sub_fields": [
                 {
-                    "key": "field_681699d162524",
-                    "label": "Imagem Metade",
-                    "name": "imagem_metade",
+                    "key": "field_6816888191e25",
+                    "label": "Item Serviços",
+                    "name": "item_servicos",
                     "aria-label": "",
-                    "type": "true_false",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -259,13 +337,13 @@
                         "class": "",
                         "id": ""
                     },
-                    "message": "Para exibir a imagem em apenas metade da tela.",
-                    "default_value": 0,
+                    "default_value": "",
+                    "maxlength": "",
                     "allow_in_bindings": 0,
-                    "ui": 0,
-                    "ui_on_text": "",
-                    "ui_off_text": "",
-                    "parent_repeater": "field_681695b4eba86"
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6816885f91e24"
                 }
             ]
         }
@@ -273,9 +351,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "projetos"
+                "value": "template-escritorio\/escritorio.php"
             }
         ]
     ],
@@ -288,5 +366,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746312509
+    "modified": 1746307212
 }
