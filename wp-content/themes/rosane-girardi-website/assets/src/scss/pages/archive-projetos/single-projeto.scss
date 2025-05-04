@@ -79,6 +79,7 @@ body.single-projetos {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    overflow: hidden;
     @include media-breakpoint-up(md) {
       flex-direction: row;
     }

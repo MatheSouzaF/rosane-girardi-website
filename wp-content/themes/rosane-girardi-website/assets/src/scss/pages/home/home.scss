@@ -7,6 +7,10 @@ body.page-template-homepage {
     top: auto !important;
     bottom: 31px !important;
     color: #ffffff !important;
+    height: 32px !important;
+    @include media-breakpoint-up(md) {
+      height: 50px !important;
+    }
   }
 
   .swiper-button-next {
@@ -15,8 +19,11 @@ body.page-template-homepage {
   }
 
   .swiper-button-prev {
-    right: 100px !important;
+    right: 70px !important;
     left: auto !important;
+    @include media-breakpoint-up(md) {
+      right: 100px !important;
+    }
   }
 
   .swiper.slider2 {

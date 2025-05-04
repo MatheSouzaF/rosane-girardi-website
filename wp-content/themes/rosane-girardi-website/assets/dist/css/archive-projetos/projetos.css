@@ -57,7 +57,12 @@ body.archive .projetos-list {
   padding: 140px 0;
 }
 body.archive .projetos-list .filtro-taxonomias {
-  margin-bottom: 80px;
+  margin-bottom: 40px;
+}
+@media (min-width: 1024px) {
+  body.archive .projetos-list .filtro-taxonomias {
+    margin-bottom: 80px;
+  }
 }
 body.archive .projetos-list .filtro-taxonomias ul {
   display: -webkit-box;

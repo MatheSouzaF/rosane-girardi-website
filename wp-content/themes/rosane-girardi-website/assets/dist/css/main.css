@@ -889,7 +889,7 @@ footer .logo-footer {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0 24px;
+    padding: 0 20px;
     margin-top: 20px;
   }
   footer > div {

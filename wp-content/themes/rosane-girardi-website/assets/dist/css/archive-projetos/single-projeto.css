@@ -109,6 +109,7 @@ body.single-projetos .description {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 @media (min-width: 1024px) {
   body.single-projetos .description {

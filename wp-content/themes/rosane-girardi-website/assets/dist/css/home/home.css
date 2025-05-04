@@ -36,14 +36,26 @@ body.page-template-homepage .swiper-button-prev {
   top: auto !important;
   bottom: 31px !important;
   color: #ffffff !important;
+  height: 32px !important;
+}
+@media (min-width: 1024px) {
+  body.page-template-homepage .swiper-button-next,
+  body.page-template-homepage .swiper-button-prev {
+    height: 50px !important;
+  }
 }
 body.page-template-homepage .swiper-button-next {
   right: 40px !important;
   left: auto;
 }
 body.page-template-homepage .swiper-button-prev {
-  right: 100px !important;
+  right: 70px !important;
   left: auto !important;
+}
+@media (min-width: 1024px) {
+  body.page-template-homepage .swiper-button-prev {
+    right: 100px !important;
+  }
 }
 body.page-template-homepage .swiper.slider2 {
   width: 100%;

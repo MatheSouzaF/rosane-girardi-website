@@ -32,9 +32,17 @@ get_header();
         <?php endwhile;
         endif; ?>
     </div>
+    <div class="box-buttons">
 
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+        <svg class="swiper-button-next" xmlns="http://www.w3.org/2/svg" width="65" height="148" viewBox="0 0 65 148"
+            fill="none">
+            <path d="M3 2L60.5 74L3 146" stroke="white" stroke-width="6" />
+        </svg>
+        <svg class="swiper-button-prev" xmlns="http://www.w3.org/2000/svg" width="64" height="148" viewBox="0 0 64 148"
+            fill="none">
+            <path d="M61.5 2L4 74L61.5 146" stroke="white" stroke-width="6" />
+        </svg>
+    </div>
 </div>
 
 <?php get_footer() ?>
