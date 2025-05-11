@@ -12,7 +12,7 @@ get_header(); ?>
         if ($image) :
             $image_url = $image['url'];
             $image_alt = $image['alt']; ?>
-            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
         <?php endif; ?>
     </div>
 
@@ -35,7 +35,7 @@ get_header(); ?>
                 if ($image) :
                     $image_url = $image['url'];
                     $image_alt = $image['alt']; ?>
-                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+                <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
                 <?php endif; ?>
             </div>
         </div>
@@ -45,6 +45,7 @@ get_header(); ?>
             <div class="marquee d-flex justify-content-around">
                 <h2>
                     <?php echo get_field('texto_animado'); ?>
+                    <?php echo get_field('texto_animado'); ?>
                 </h2>
             </div>
         </div>
@@ -53,16 +54,16 @@ get_header(); ?>
             <?php
             if (have_rows('time')) :
                 while (have_rows('time')) : the_row(); ?>
-                    <div class="team-item">
-                        <?php
+            <div class="team-item">
+                <?php
                         $image = get_sub_field('imagem_time');
                         if ($image) :
                             $image_url = $image['url'];
                             $image_alt = $image['alt']; ?>
-                            <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
-                        <?php endif; ?>
-                        <div class="team-name"><?php echo get_sub_field('nome_time'); ?></div>
-                    </div>
+                <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
+                <?php endif; ?>
+                <div class="team-name"><?php echo get_sub_field('nome_time'); ?></div>
+            </div>
             <?php endwhile;
             endif; ?>
 
@@ -77,7 +78,7 @@ get_header(); ?>
                     <?php
                     if (have_rows('repetidor_servicos')) :
                         while (have_rows('repetidor_servicos')) : the_row(); ?>
-                            <li><?php echo get_sub_field('item_servicos'); ?></li>
+                    <li><?php echo get_sub_field('item_servicos'); ?></li>
                     <?php endwhile;
                     endif; ?>
 

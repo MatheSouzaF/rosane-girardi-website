@@ -204,7 +204,7 @@ body.single-projetos .see-more a {
 body.single-projetos .see-more:hover {
   scale: 1.05;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body.single-projetos .banner {
     height: 100vh;
   }

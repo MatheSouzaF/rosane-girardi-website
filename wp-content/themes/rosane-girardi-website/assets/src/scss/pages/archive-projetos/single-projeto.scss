@@ -169,7 +169,7 @@ body.single-projetos {
     }
   }
 
-  @media (max-width: 768px) {
+  @include media-breakpoint-down(md) {
     .banner {
       height: calc(100vh);
     }

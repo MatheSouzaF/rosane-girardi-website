@@ -47,16 +47,8 @@ body.page-template-escritorio .sticky .filter .option {
 body.page-template-escritorio .sticky .navigation__menu-label .navigation__label-bar {
   background-color: #595851;
 }
-body.page-template-escritorio .swup {
-  padding: 20px;
-}
-@media (min-width: 1024px) {
-  body.page-template-escritorio .swup {
-    padding: 20px 80px;
-  }
-}
 body.page-template-escritorio .description {
-  padding: 60px 0;
+  padding: 60px 20px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,7 +60,7 @@ body.page-template-escritorio .description {
 }
 @media (min-width: 1024px) {
   body.page-template-escritorio .description {
-    padding: 120px 0;
+    padding: 120px 80px;
   }
 }
 body.page-template-escritorio #swup .description p {
@@ -151,12 +143,17 @@ body.page-template-escritorio .lettering {
   color: #595851;
 }
 body.page-template-escritorio .team-grid {
-  padding: 140px 0px 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 32px 32px;
   grid-template-areas: ". . ." ". . .";
+  padding: 20px;
+}
+@media (min-width: 1024px) {
+  body.page-template-escritorio .team-grid {
+    padding: 140px 80px 20px;
+  }
 }
 body.page-template-escritorio .team-item {
   position: relative;
@@ -208,33 +205,8 @@ body.page-template-escritorio .marquee h2 {
   color: #33322e;
 }
 body.page-template-escritorio .marquee {
-  top: 0;
-  left: 100%;
-  width: 100%;
-  /* overflow: hidden; */
   position: absolute;
   white-space: nowrap;
-  -webkit-animation: marquee 20s linear infinite;
-          animation: marquee 20s linear infinite;
-}
-body.page-template-escritorio b {
-  padding-left: 10px;
-}
-@-webkit-keyframes marquee {
-  0% {
-    left: 50%;
-  }
-  100% {
-    left: -50%;
-  }
-}
-@keyframes marquee {
-  0% {
-    left: 50%;
-  }
-  100% {
-    left: -50%;
-  }
 }
 body.page-template-escritorio .service {
   display: -webkit-box;
@@ -246,9 +218,11 @@ body.page-template-escritorio .service {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin: 64px 0;
+  padding: 20px;
 }
 @media (min-width: 1024px) {
   body.page-template-escritorio .service {
+    padding: 20px 80px;
     margin: 104px 0;
   }
 }
@@ -281,7 +255,7 @@ body.page-template-escritorio .service .list li {
   padding: 30px 0;
   border-bottom: 1px solid rgba(89, 88, 81, 0.5);
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   body.page-template-escritorio .description {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -313,6 +287,14 @@ body.page-template-escritorio .service .list li {
         -ms-flex-order: 1;
             order: 1;
     margin-bottom: 40px;
+    max-height: 600px;
+  }
+  body.page-template-escritorio .right-image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    max-height: 600px;
   }
   body.page-template-escritorio .marquee h2 {
     font-size: 8vw;

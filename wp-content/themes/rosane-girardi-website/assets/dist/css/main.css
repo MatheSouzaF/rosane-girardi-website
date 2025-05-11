@@ -460,7 +460,7 @@ nav .button {
   opacity: 0;
   pointer-events: none;
   position: absolute;
-  margin-top: 5px;
+  margin-top: 16px;
   margin-left: -20px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -673,7 +673,7 @@ nav .button {
   }
 }
 .box-navbar .active-btn .navigation__label-bar1 {
-  top: 11px;
+  top: 11.5px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   background: #595851;

@@ -35,6 +35,16 @@ function initDynamicModules() {
       moduleFunction: 'initPage',
     },
     {
+      selector: '.page-template-tapume',
+      modulePath: './pages/tapume/tapume.js',
+      moduleFunction: 'initStart',
+    },
+    {
+      selector: '.page-template-escritorio',
+      modulePath: './pages/escritorio/escritorio.js',
+      moduleFunction: 'initStart',
+    },
+    {
       selector: 'body',
       modulePath: './base/header.js',
       moduleFunction: 'initHeader',

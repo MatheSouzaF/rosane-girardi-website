@@ -31,16 +31,10 @@ body.page-template-escritorio {
     }
   }
 
-  .swup {
-    padding: 20px;
-    @include media-breakpoint-up(md) {
-      padding: 20px 80px;
-    }
-  }
   .description {
-    padding: 60px 0;
+    padding: 60px 20px;
     @include media-breakpoint-up(md) {
-      padding: 120px 0;
+      padding: 120px 80px;
     }
     display: flex;
     justify-content: space-between;
@@ -123,7 +117,6 @@ body.page-template-escritorio {
   }
 
   .team-grid {
-    padding: 140px 0px 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -131,6 +124,10 @@ body.page-template-escritorio {
     grid-template-areas:
       '. . .'
       '. . .';
+    padding: 20px;
+    @include media-breakpoint-up(md) {
+      padding: 140px 80px 20px;
+    }
   }
 
   .team-item {
@@ -187,34 +184,17 @@ body.page-template-escritorio {
   }
 
   .marquee {
-    top: 0;
-    left: 100%;
-    width: 100%;
-    /* overflow: hidden; */
     position: absolute;
     white-space: nowrap;
-    animation: marquee 20s linear infinite;
-  }
-
-  b {
-    padding-left: 10px;
-  }
-
-  @keyframes marquee {
-    0% {
-      left: 50%;
-    }
-
-    100% {
-      left: -50%;
-    }
   }
 
   .service {
     display: flex;
     justify-content: flex-end;
     margin: 64px 0;
+    padding: 20px;
     @include media-breakpoint-up(md) {
+      padding: 20px 80px;
       margin: 104px 0;
     }
   }
@@ -253,7 +233,7 @@ body.page-template-escritorio {
     border-bottom: 1px solid rgba(89, 88, 81, 0.5);
   }
 
-  @media (max-width: 768px) {
+  @include media-breakpoint-down(md) {
     .description {
       flex-direction: column;
     }
@@ -279,6 +259,13 @@ body.page-template-escritorio {
       z-index: 9;
       order: 1;
       margin-bottom: 40px;
+      max-height: 600px;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        max-height: 600px;
+      }
     }
 
     .marquee h2 {

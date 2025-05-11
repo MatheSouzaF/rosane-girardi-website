@@ -1,0 +1,19 @@
+function initStart() {
+  var slider1 = new Swiper('.slider1', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+      delay: 3000,
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+}
+
+export {initStart};

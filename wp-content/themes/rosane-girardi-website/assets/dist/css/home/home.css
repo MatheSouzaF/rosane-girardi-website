@@ -34,27 +34,45 @@ body.page-template-homepage {
 body.page-template-homepage .swiper-button-next,
 body.page-template-homepage .swiper-button-prev {
   top: auto !important;
-  bottom: 31px !important;
   color: #ffffff !important;
   height: 32px !important;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  bottom: 50px !important;
 }
 @media (min-width: 1024px) {
   body.page-template-homepage .swiper-button-next,
   body.page-template-homepage .swiper-button-prev {
-    height: 50px !important;
+    height: 40px !important;
   }
 }
+body.page-template-homepage .sidebar .box-links-sidebar li a {
+  color: #595851;
+}
 body.page-template-homepage .swiper-button-next {
-  right: 40px !important;
-  left: auto;
+  left: 60px !important;
+}
+@media (min-width: 768px) {
+  body.page-template-homepage .swiper-button-next {
+    left: 76px !important;
+  }
+}
+@media (min-width: 1280px) {
+  body.page-template-homepage .swiper-button-next {
+    left: 120px !important;
+  }
 }
 body.page-template-homepage .swiper-button-prev {
-  right: 70px !important;
-  left: auto !important;
+  left: 24px !important;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   body.page-template-homepage .swiper-button-prev {
-    right: 100px !important;
+    left: 40px !important;
+  }
+}
+@media (min-width: 1280px) {
+  body.page-template-homepage .swiper-button-prev {
+    left: 80px !important;
   }
 }
 body.page-template-homepage .swiper.slider2 {
@@ -79,13 +97,20 @@ body.page-template-homepage .swiper.slider1 {
 }
 body.page-template-homepage .swiper .project-name {
   position: absolute;
-  left: 30px;
-  bottom: 30px;
+  left: 80px;
   font-weight: 250;
   font-size: 36px;
   line-height: 140%;
   color: #ffffff;
   z-index: 9;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  bottom: 100px;
+}
+@media (max-width: 1280px) {
+  body.page-template-homepage .swiper .project-name {
+    left: 40px;
+  }
 }
 body.page-template-homepage .swiper.slider1 img {
   width: 100%;
@@ -111,7 +136,8 @@ body.page-template-homepage .swiper.slider1 .swiper-slide:not(.swiper-slide-acti
 @media (max-width: 768px) {
   body.page-template-homepage .swiper .project-name {
     left: 24px;
-    bottom: 64px;
+    bottom: 104px;
+    max-width: 70%;
     font-size: 24px;
   }
 }
