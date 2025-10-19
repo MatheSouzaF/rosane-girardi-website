@@ -9,7 +9,7 @@ get_header(); ?>
         <?php
         // Chamar a imagem do ACF para o post atual
         $image = get_field('banner_imagem_desktop');
-        if ($image) :
+        if ($image):
             $image_url = $image['url'];
             $image_alt = $image['alt']; ?>
             <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($image_alt); ?>">
@@ -30,31 +30,53 @@ get_header(); ?>
             <div class="list">
                 <ul>
                     <?php
-                    if (have_rows('lista_descricao')) :
-                        while (have_rows('lista_descricao')) : the_row(); ?>
+                    if (have_rows('lista_descricao')):
+                        while (have_rows('lista_descricao')):
+                            the_row(); ?>
                             <li><?php echo get_sub_field('item_lista'); ?></li>
-                    <?php endwhile;
+                        <?php endwhile;
                     endif; ?>
 
                 </ul>
             </div>
         </div>
+        <?php
+        $video_background = get_field('video');
+        if ($video_background): ?>
+            <div class="video-background">
+                <div class="box-img">
+                    <video class="video-banner" autoplay muted loop playsinline>
+                        <source src="<?php echo esc_url($video_background); ?>" type="video/mp4">
+                    </video>
+
+                    <?php
+                    $imageMobile = get_field('imagem_default');
+                    if ($imageMobile):
+                        $image_url = $imageMobile['url'];
+                        $image_alt = $imageMobile['alt']; ?>
+                        <img class="img-mobile" src="<?php echo esc_url($image_url); ?>"
+                            alt="<?php echo esc_attr($image_alt); ?>">
+                    <?php endif; ?>
+                </div>
+            </div>
+        <?php endif; ?>
 
 
         <div class="box-galeria">
             <?php
-            if (have_rows('galeiria_de_imagens')) :
-                while (have_rows('galeiria_de_imagens')) : the_row();
+            if (have_rows('galeiria_de_imagens')):
+                while (have_rows('galeiria_de_imagens')):
+                    the_row();
                     // Verificar se o campo 'imagem_metade' está marcado como true
                     $add_class = get_sub_field('imagem_metade') ? 'row-img' : '';
                     $imagem = get_sub_field('imagens');
-                    if ($imagem) : ?>
+                    if ($imagem): ?>
                         <a class="imagem-galeria <?php echo esc_attr($add_class); ?>" href="<?php echo esc_url($imagem['url']); ?>"
                             data-fancybox="galeria-collection">
                             <img class="imgGrow" src="<?php echo esc_url($imagem['url']); ?>"
                                 alt="<?php echo esc_attr($imagem['alt']); ?>">
                         </a>
-            <?php
+                        <?php
                     endif;
                 endwhile;
             endif;

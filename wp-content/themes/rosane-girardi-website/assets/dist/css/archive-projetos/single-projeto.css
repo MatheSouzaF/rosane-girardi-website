@@ -237,6 +237,65 @@ body.single-projetos .see-more:hover {
     margin: 0 auto 80px;
   }
 }
+body.single-projetos .video-background {
+  height: calc(100vh - 110px);
+  position: relative;
+  margin-bottom: 20px;
+}
+body.single-projetos .video-background .box-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+body.single-projetos .video-background .box-img::after {
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  left: 0;
+  z-index: 2;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+}
+body.single-projetos .video-background .box-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body.single-projetos .video-background .box-img video {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 2;
+  position: relative;
+  display: none;
+}
+@media (min-width: 1024px) {
+  body.single-projetos .video-background .box-img video {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+body.single-projetos .video-background .box-img .img-mobile {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 1024px) {
+  body.single-projetos .video-background .box-img .img-mobile {
+    display: none;
+  }
+}
 body.single-projetos .box-galeria {
   display: -webkit-box;
   display: -webkit-flex;

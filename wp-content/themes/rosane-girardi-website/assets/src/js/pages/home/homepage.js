@@ -5,7 +5,7 @@ function swiper() {
     loop: true,
     effect: 'fade',
     autoplay: {
-      delay: 3000,
+      delay: 1800,
     },
 
     // Navigation arrows
